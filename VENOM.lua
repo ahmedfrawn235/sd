@@ -325,6 +325,8 @@ if tonumber(user_id) == tonumber(1770739933) then
 var = true 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = true  
+elseif tonumber(user_id) == tonumber(1990104439) then
+var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(ban_id) then
