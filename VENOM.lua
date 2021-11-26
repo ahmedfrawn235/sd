@@ -165,7 +165,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/ahmedfrawn235/sead/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/ahmedfrawn235/sd/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -367,8 +367,8 @@ if tonumber(user_id) == tonumber(1770739933) then
 var = ' مالك السورس' 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = '[المبرمج فرعون الكبير](https://t.me/DEV_FRAWN)'
-if tonumber(user_id) == tonumber(1990104439) then  
-var = 'مالك السورس'
+elseif tonumber(user_id) == tonumber(1990104439) then
+var = ''
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif bot_data:sismember(ban_id.."Dev:ban:2", user_id) then
@@ -1862,7 +1862,7 @@ echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦�
 end
 if text == 'تحديث السورس ' and Devban(msg) then 
 os.execute('rm -rf VENOM.lua')
-os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sead/main/VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sd/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,'⋆ تم تحديث السورس')
 dofile('VENOM.lua')  
 end
@@ -3546,7 +3546,7 @@ end
 return false
 end
 os.execute('rm -rf VENOM.lua')
-os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sead/main/VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sd/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,'⋆ تم تحديث السورس')
 dofile('VENOM.lua')  
 end
@@ -7079,7 +7079,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if Devban(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sead/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sd/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -7117,7 +7117,7 @@ t = "⋆ الملف  ⤌ "..file.."\n⋆ تم تعطيل ملف \n"
 else
 t = "⋆ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sead/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sd/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -7137,7 +7137,7 @@ t = "⋆ بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = "⋆ الملف  ⤌ "..file.."\n⋆ تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sead/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sd/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
