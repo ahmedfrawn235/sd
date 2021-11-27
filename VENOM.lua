@@ -165,7 +165,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/ahmedfrawn235/sd/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/ahmedfrawn235/sead/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -190,7 +190,7 @@ end
 return VENOM  
 end 
 
-sudo_users = {SUDO,1970574026,1770739933,1990104439}   
+sudo_users = {SUDO,1970574026,1770739933}   
 function SudoBot(msg)  
 local VENOM = false  
 for k,v in pairs(sudo_users) do  
@@ -325,8 +325,6 @@ if tonumber(user_id) == tonumber(1770739933) then
 var = true 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = true  
-elseif tonumber(user_id) == tonumber(1990104439) then
-var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(ban_id) then
@@ -369,8 +367,6 @@ if tonumber(user_id) == tonumber(1770739933) then
 var = ' مالك السورس' 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = '[المبرمج فرعون الكبير](https://t.me/DEV_FRAWN)'
-elseif tonumber(user_id) == tonumber(1990104439) then
-var = ''
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif bot_data:sismember(ban_id.."Dev:ban:2", user_id) then
@@ -1864,7 +1860,7 @@ echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦�
 end
 if text == 'تحديث السورس ' and Devban(msg) then 
 os.execute('rm -rf VENOM.lua')
-os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sd/main/VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sead/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,'⋆ تم تحديث السورس')
 dofile('VENOM.lua')  
 end
@@ -2035,16 +2031,16 @@ end
 if text == 'قناه السورس' and Devban(msg) then
 bot_data:del(ban_id..'Srt:Bot') 
 local Text = [[ 
-[𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)
+[𝐅𝐑𝐀𝐖𝐍 𝐖𝐀](https://t.me/s_aytra)
 
-[سيطره](https://t.me/s_aytra)
+[فرعون للمعلومات](https://t.me/s_aytra)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔◖', url="t.me/s_aytra"}}, 
+{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍◖', url="t.me/s_aytra"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/s_aytra/1129&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and msa3d(msg) then  
@@ -3548,7 +3544,7 @@ end
 return false
 end
 os.execute('rm -rf VENOM.lua')
-os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sd/main/VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/ahmedfrawn235/sead/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,'⋆ تم تحديث السورس')
 dofile('VENOM.lua')  
 end
@@ -3665,11 +3661,11 @@ keyboard.inline_keyboard = {
 {text = '◗ متطوره◖', callback_data="/DRG"},
 },
 {
-{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
+{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍 ◖', url="t.me/s_aytra"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/s_aytra/1129&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'امر الـعـضو ' or text == 'اوامر الأعضاء' or text == 'اوامر الاعضاء' then
 local Text = [[
@@ -3862,13 +3858,13 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == '111' then 
 local Text = [[ 
-╭▱▰▱▰𓆩[𝗞𝙄𝗟𝗟𝙀𝙍](https://t.me/s_aytra)𓆪▱▰▱▰╮
+╭▱▰▱▰𓆩[𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)𓆪▱▰▱▰╮
 ┆
 ┆[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙰𝚈𝚃𝚁𝙰
   𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
   𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/s_aytra)
 ┆
-╰▱▰▱▰𓆩[𝗞𝙄𝗟𝗟𝙀𝙍](https://t.me/s_aytra)𓆪▱▰▱▰╯
+╰▱▰▱▰𓆩[𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)𓆪▱▰▱▰╯
 ]]
 keyboard = {}
 keyboard.inline_keyboard = {
@@ -3881,7 +3877,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. ms
 end
 if text =='فرعون ' then
 local Text = [[
-مع مالك السورس لو حابب تتواصل معاه
+مع المبرمج فرعون لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 ]]
 keyboard = {} 
@@ -5017,7 +5013,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = ' 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/frawnwabot"}}, 
+{{text = ' 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍', url="t.me/frawnwabot"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -5057,7 +5053,7 @@ keyboard.inline_keyboard = {
 {{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/s_aytra/1129&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --------------------------------------------------------------------------------------------------------------
 if text == 'تحديث' and Devban(msg) then    
@@ -5127,7 +5123,7 @@ if tonumber(result.sender_user_id_) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر المبرمج فرعون الكبير  عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1990104439) then  
+if tonumber(result.sender_user_id_) == tonumber(SUDO) then  
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر عام")
 return false 
 end
@@ -5185,8 +5181,8 @@ if result.id_ == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر المبرمج فرعون الكبير \n")
 return false 
 end
-if result.id_ == tonumber(1990104439) then
-send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر مطور السورس \n")
+if result.id_ == tonumber(SUDO) then
+send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر مالك السورس \n")
 return false 
 end
 if result.id_ == tonumber(SUDO) then
@@ -5237,8 +5233,8 @@ if tonumber(userid) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر المبرمج فرعون الكبير  عام")
 return false 
 end
-if tonumber(userid) == tonumber(1990104439) then  
-send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مطور السورس عام")
+if tonumber(userid) == tonumber(SUDO) then  
+send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مالك السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(SUDO) then  
@@ -5290,8 +5286,8 @@ if tonumber(result.sender_user_id_) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم المبرمج فرعون الكبير  عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1990104439) then  
-send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مطور السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(SUDO) then  
+send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مالك السورس عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(SUDO) then  
@@ -5343,8 +5339,8 @@ if result.id_ == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم المبرمج فرعون الكبير  \n")
 return false 
 end
-if result.id_ == tonumber(1990104439) then
-send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم مطور السورس \n")
+if result.id_ == tonumber(SUDO) then
+send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم مالك السورس \n")
 return false 
 end
 if result.id_ == tonumber(SUDO) then
@@ -5395,8 +5391,8 @@ if tonumber(userid) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم المبرمج فرعون الكبير عام")
 return false 
 end
-if tonumber(userid) == tonumber(1990104439) then  
-send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مطور السورس عام")
+if tonumber(userid) == tonumber(SUDO) then  
+send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مالك السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(SUDO) then  
@@ -7081,7 +7077,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if Devban(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sd/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sead/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -7119,7 +7115,7 @@ t = "⋆ الملف  ⤌ "..file.."\n⋆ تم تعطيل ملف \n"
 else
 t = "⋆ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sd/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sead/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -7139,7 +7135,7 @@ t = "⋆ بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = "⋆ الملف  ⤌ "..file.."\n⋆ تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sd/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/ahmedfrawn235/sead/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
@@ -18481,8 +18477,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ˹𝙳𝙴𝚅 𝚂𝙰𝚈𝚃𝚁𝙰˼ ',url="t.me/P_I_C_A_T_C_H_U"},{text = '˹𝚃 𝙰 𝚆 𝙰 𝚂 𝙾 𝙻˼',url="t.me/K_I_L_L_E_R_BOT"}},
-{{text =  '˹𝙳𝙴𝚅 𝙳𝙰𝚁𝙱𝙺𝙰˼ ' ,url="t.me/P_I_C_A_T_C_H_U"},{text ='  ˹𝚃 𝙰 𝚆 𝙰 𝚂 𝙾 𝙻˼ ',url="t.me/K_I_L_L_E_R_BOT"}},
+{{text = ' ˹𝙳𝙴𝚅 𝚂𝙰𝚈𝚃𝚁𝙰˼ ',url="t.me/P_I_C_A_T_C_H_U"},{text = '˹𝙳𝙴𝚅 𝙳𝙰𝚁𝙱𝙺𝙰˼',url="t.me/D_ARBKA12"}},
 {{text = ' ˹𝙱 𝙰 𝙲 𝙺˼ ', callback_data="/frawn4"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18496,7 +18491,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' الــمــســيــطريــن ☻ツ ' ,url="t.me/s_aytra"}},
+{{text = ' 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ' ,url="t.me/s_aytra"}},
 {{text =  ' ˹ 𝙱 𝙰 𝙲 𝙺 ˼ ', callback_data="/frawn3"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
