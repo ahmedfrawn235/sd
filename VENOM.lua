@@ -3882,7 +3882,7 @@ end
 local tokenget ='2065160893:AAFzpysOLqA0ZEjRkFMvEvjMX4qigFXOpSE'
 if SourceCh(msg) and text == 'ريبوت' or text == "robot" then
 local id ='1970574026'
-local urrl = https.request('https://api.telegram.org/bot'..tokenget.'/getchat?chat_id='..id)
+local urrl = https.request('https://api.telegram.org/bot'..tokenget..'/getchat?chat_id='..id)
 local json = JSON.decode(urrl)
 local name = json.result.first_name
 local user = json.result.username
